@@ -10,7 +10,7 @@ Usage
 First, you'll need to setup your [Copyscape](http://www.copyscape.com/) account and whatnot.  You can do
 that [here](http://www.copyscape.com/signup.php?pro=1&o=f).
 
-Next, you'll need to setup your Copyscape account and enable API access.
+Next, install the gem.
 
     $ gem install copyscape-rb
 
