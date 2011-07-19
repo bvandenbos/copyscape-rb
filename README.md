@@ -12,7 +12,7 @@ that [here](http://www.copyscape.com/signup.php?pro=1&o=f).
 
 Next, install the gem.
 
-    $ gem install copyscape-rb
+    $ gem install copyscape
 
 And then you can do things like this...
 
