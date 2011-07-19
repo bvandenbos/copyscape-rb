@@ -1,5 +1,4 @@
 require 'forwardable'
-require 'cgi'
 require 'httparty'
 
 module Copyscape

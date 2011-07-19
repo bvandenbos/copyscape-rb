@@ -10,7 +10,7 @@ class TextSearchTest < Test::Unit::TestCase
         assert_equal '/', path
         assert_equal 'joe', params[:u]
         assert_equal '123abc', params[:k]
-        assert_equal 'this is some text', CGI.unescape(params[:t])
+        assert_equal 'this is some text', params[:t]
         assert_equal 'csearch', params[:o]
         assert_equal 'UTF-8', params[:e]
       end

@@ -10,7 +10,7 @@ class UrlSearchTest < Test::Unit::TestCase
         assert_equal '/', path
         assert_equal 'joe', params[:u]
         assert_equal '123abc', params[:k]
-        assert_equal 'http://www.someurl.com/blah.html', CGI.unescape(params[:q])
+        assert_equal 'http://www.someurl.com/blah.html', params[:q]
         assert_equal 'csearch', params[:o]
       end
       @search = Copyscape::UrlSearch.new('http://www.someurl.com/blah.html')
