@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <query>http://www.someurl.com/some_path.html</query>
+  <querywords>123</querywords>
+  <count>0</count>
+</response>

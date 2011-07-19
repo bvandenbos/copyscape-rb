@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    copyscape (0.0.1)
+      httparty (= 0.7.7)
+      nokogiri (= 1.4.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crack (0.1.8)
+    httparty (0.7.7)
+      crack (= 0.1.8)
+    mocha (0.9.8)
+      rake
+    nokogiri (1.4.1)
+    rake (0.8.7)
+    shoulda-context (1.0.0.beta1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (>= 1.0.0)
+  copyscape!
+  mocha
+  rake (= 0.8.7)
+  shoulda-context

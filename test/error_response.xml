@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <error>connection failed (2) - please ensure you entered the URL correctly</error>
+  <query>http://www.somethingthatdoesntexist.com/</query>
+</response>
