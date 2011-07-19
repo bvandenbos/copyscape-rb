@@ -37,13 +37,13 @@ class ResponseTest < Test::Unit::TestCase
     
     should "include duplicates" do
       dup = @response.duplicates.first
-      assert_equal 'http://www.archives.gov/exhibits/charters/declaration_transcript.html', dup[:url]
-      assert_equal "Declaration of Independence - Transcript", dup[:title]
+      assert_equal 'http://www.archives.gov/exhibits/charters/declaration_transcript.html', dup['url']
+      assert_equal "Declaration of Independence - Transcript", dup['title']
       assert_equal "... We hold these truths to be self-evident, that all men are created equal, that   they are endowed by ... But when a long train of abuses and usurpations, pursuing invariably the same ... to pass Laws of immediate and pressing importance, unless suspended in their ... for opposing with manly firmness his invasions on the   rights of the people. ... English Laws in a neighbouring Province, establishing therein an Arbitrary   government, ... He has plundered our seas, ravaged our Coasts, burnt our towns, ... of Cruelty & perfidy scarcely paralleled in the most barbarous ages, ... He has constrained our fellow Citizens taken Captive on the high Seas to   bear ... the merciless Indian Savages, whose known rule of warfare, ... which, would inevitably interrupt our connections and correspondence. ... on   the protection of divine Providence, we mutually pledge to each other our ... ",
-        dup[:text_snippet]
+        dup['textsnippet']
       assert_equal "<font color=\"#777777\">... </font><font color=\"#000000\">We hold these truths to be self-evident, that all men are created equal, that   they are endowed by ... </font><font color=\"#777777\"></font><font color=\"#000000\">But when a long train of abuses and usurpations, pursuing invariably the same ... </font><font color=\"#777777\"></font><font color=\"#000000\">to pass Laws of immediate and pressing importance, unless suspended in their ... </font><font color=\"#777777\"></font><font color=\"#000000\">for opposing with manly firmness his invasions on the   rights of the people. ... </font><font color=\"#777777\"></font><font color=\"#000000\">English Laws in a neighbouring Province, establishing therein an Arbitrary   government, ... </font><font color=\"#777777\"></font><font color=\"#000000\">He has plundered our seas, ravaged our Coasts, burnt our towns, ... </font><font color=\"#777777\"></font><font color=\"#000000\">of Cruelty &amp; perfidy scarcely paralleled in the most barbarous ages, ... </font><font color=\"#777777\"></font><font color=\"#000000\">He has constrained our fellow Citizens taken Captive on the high Seas to   bear ... </font><font color=\"#777777\"></font><font color=\"#000000\">the merciless Indian Savages, whose known rule of warfare, ... </font><font color=\"#777777\"></font><font color=\"#000000\">which, would inevitably interrupt our connections and correspondence. ... </font><font color=\"#777777\"></font><font color=\"#000000\">on   the protection of divine Providence, we mutually pledge to each other our ... </font>",
-        dup[:html_snippet]
-      assert_equal 134, dup[:min_words_matched]
+        dup['htmlsnippet']
+      assert_equal 134, dup['minwordsmatched']
     end
     
     should "have the right amount of duplicates" do

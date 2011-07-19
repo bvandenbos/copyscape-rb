@@ -19,11 +19,11 @@ And then...
     search.duplicate? # => true
     search.count # => 81
     search.duplicates.each do |duplicate|
-      puts duplciate[:title]
-      puts duplicate[:url]
-      puts duplicate[:text_snippet]
-      puts duplicate[:html_snippet]
-      puts duplicate[:minwordsmatched]
+      puts duplciate['title']
+      puts duplicate['url']
+      puts duplicate['textsnippet']
+      puts duplicate['htmlsnippet']
+      puts duplicate['minwordsmatched']
     end
     
 
