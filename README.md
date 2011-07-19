@@ -1,11 +1,11 @@
 copyscape
----------
+=========
 
 Ruby wrapper for the Copyscape API.
 
 
 Usage
-=====
+-----
 
 First, you'll need to setup your [Copyscape](http://www.copyscape.com/) account and whatnot.  You can do
 that [here](http://www.copyscape.com/signup.php?pro=1&o=f).
@@ -41,7 +41,7 @@ it would be pretty easy to add.
 
     
 More...
-=======
+-------
 
 I'm in no way associated with Copyscape.
 
