@@ -1,18 +1,20 @@
 PATH
   remote: .
   specs:
-    copyscape (0.0.1)
-      httparty (= 0.7.7)
+    copyscape (0.0.3)
+      httparty (~> 0.8.1)
       nokogiri (= 1.4.1)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    crack (0.1.8)
-    httparty (0.7.7)
-      crack (= 0.1.8)
+    httparty (0.8.1)
+      multi_json
+      multi_xml
     mocha (0.9.8)
       rake
+    multi_json (1.1.0)
+    multi_xml (0.4.2)
     nokogiri (1.4.1)
     rake (0.8.7)
     shoulda-context (1.0.0.beta1)
