@@ -18,8 +18,8 @@ module Copyscape
       TextSearch.new(*prms)
     end
 
-    def balance
-      Balance.new
+    def balance(format)
+      Balance.new(format)
     end
     
   end
