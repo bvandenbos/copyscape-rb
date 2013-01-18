@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   
   s.add_dependency("nokogiri", "1.4.1")
-  s.add_dependency("httparty", "~> 0.8.1")
+  s.add_dependency("httparty", ">= 0.8.1")
   s.add_development_dependency("rake", "0.8.7")
   s.add_development_dependency("shoulda-context")
   s.add_development_dependency("mocha")

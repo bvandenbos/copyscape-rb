@@ -1,6 +1,7 @@
 require 'copyscape/response'
 require 'copyscape/url_search'
 require 'copyscape/text_search'
+require 'copyscape/balance'
 require 'copyscape/version'
 
 module Copyscape
@@ -15,6 +16,10 @@ module Copyscape
     
     def text_search(*prms)
       TextSearch.new(*prms)
+    end
+
+    def balance(format)
+      Balance.new(format)
     end
     
   end
