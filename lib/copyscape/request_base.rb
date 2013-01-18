@@ -32,6 +32,10 @@ module Copyscape
     def post_response(params)
       self.class.post('/', :body => base_params.merge(params)).body
     end
+
+    def get_response_balance(format)
+      self.class.get("/?u=#{Copyscape.username}&k=#{Copyscape.api_key}&o=balance&f=#{format.to_s}").body
+    end
    
   end
   
