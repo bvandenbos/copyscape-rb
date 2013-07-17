@@ -10,16 +10,16 @@ module Copyscape
 
     attr_accessor :username, :api_key
     
-    def url_search(url)
-      UrlSearch.new(url)
+    def url_search(*args)
+      UrlSearch.new(*args)
     end
     
-    def text_search(*prms)
-      TextSearch.new(*prms)
+    def text_search(*args)
+      TextSearch.new(*args)
     end
 
-    def balance(format)
-      Balance.new(format)
+    def balance(*args)
+      Balance.new(*args)
     end
     
   end

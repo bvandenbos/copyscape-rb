@@ -9,6 +9,7 @@ Usage
 
 First, you'll need to setup your [Copyscape](http://www.copyscape.com/) account and whatnot.  You can do
 that [here](http://www.copyscape.com/signup.php?pro=1&o=f).
+API documentation [here](http://www.copyscape.com/apiconfigure.php).
 
 Next, install the gem.
 
@@ -34,6 +35,9 @@ And then you can do things like this...
     # Text search
     search = Copyscape.text_search('This is some text I want to check for plagurism')
     search.duplicate? # => false
+
+    # Search with additional options
+    Copyscape.text_search('This is some text I want to check for plagurism', :x => 1, :c => 5)
     
     
 Currently, there is no support in the gem for "private index" searching, though
