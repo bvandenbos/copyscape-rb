@@ -24,7 +24,7 @@ And then you can do things like this...
     search.duplicate? # => true
     search.count # => 81
     search.duplicates.each do |duplicate|
-      puts duplciate['title']
+      puts duplicate['title']
       puts duplicate['url']
       puts duplicate['textsnippet']
       puts duplicate['htmlsnippet']
