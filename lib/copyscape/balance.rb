@@ -1,7 +1,7 @@
 require 'copyscape/request_base'
 
 module Copyscape
-  
+
   class Balance < RequestBase
 
     def initialize(format = :xml, encoding = 'UTF-8')
@@ -10,5 +10,5 @@ module Copyscape
     end
 
   end
-  
+
 end

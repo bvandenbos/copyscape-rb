@@ -1,7 +1,7 @@
 require 'copyscape/request_base'
 
 module Copyscape
-  
+
   class TextSearch < RequestBase
 
     def initialize(text, encoding = 'UTF-8')
@@ -10,5 +10,5 @@ module Copyscape
     end
 
   end
-  
+
 end
