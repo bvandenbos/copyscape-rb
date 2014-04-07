@@ -20,6 +20,20 @@ module Copyscape
       query_words.to_i if query_words
     end
 
+    def all_words_matched
+      all_words_matched = field('allwordsmatched')
+      all_words_matched.to_i if all_words_matched
+    end
+
+    def all_percent_matched
+      all_percent_matched = field('allpercentmatched')
+      all_percent_matched.to_i if all_percent_matched
+    end
+
+    def all_text_matched
+      field('alltextmatched')
+    end
+
     # Returns the number of duplicates
     def count
       count = field('count')
