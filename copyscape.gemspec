@@ -3,7 +3,7 @@ require File.expand_path("../lib/copyscape/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "copyscape"
-  s.version     = Copyscape::Version
+  s.version     = Copyscape::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Ben VandenBos']
   s.email       = ['bvandenbos@gmail.com']
