@@ -5,13 +5,13 @@ module Copyscape
 
   class RequestBase
     include HTTParty
+    extend Forwardable
     
     base_uri 'http://www.copyscape.com/api'
 
-    extend Forwardable
-    
     def_delegators :response, :duplicate_count, :duplicates, :duplicate?,
-                   :count, :error, :error?, :query, :query_words, :raw_response
+                   :count, :error, :error?, :query, :query_words, :raw_response,
+                   :allwordsmatched, :allpercentmatched, :alltextmatched, :allviewurl
 
     # API operation (o): Use csearch to search against the public Internet or psearch to search against your private index. 
     # You can also use cpsearch to search against both the Internet and your private index, for the cost of two search credits.
