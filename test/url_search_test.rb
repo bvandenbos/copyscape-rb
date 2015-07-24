@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + '/test_helper'
 
-class UrlSearchTest < Test::Unit::TestCase
+describe Copyscape::UrlSearch do
 
-  context "request_url" do
-    
-    should "have the correct url" do
+  describe "request_url" do
+
+    it "has the correct url" do
       Copyscape::UrlSearch.expects(:get).once.returns(url_search_response_duplicate).with do |path, options|
         params = options[:query]
         assert_equal '/', path
@@ -16,7 +16,7 @@ class UrlSearchTest < Test::Unit::TestCase
       @search = Copyscape::UrlSearch.new('http://www.someurl.com/blah.html')
     end
   end
-  
+
   private
 
   def url_search_response_duplicate

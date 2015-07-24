@@ -1,41 +1,40 @@
 require File.dirname(__FILE__) + '/test_helper'
-require 'copyscape/response'
 
-class ResponseTest < Test::Unit::TestCase
-  
-  context "response" do
-    setup do
+describe Copyscape::Response do
+
+  describe "response" do
+    before do
       @response = Copyscape::Response.new(url_search_response_duplicate)
     end
-    
-    should "include query" do
+
+    it "includes query" do
       assert_equal "http://www.copyscape.com/example.html", @response.query
     end
-    
-    should "include query words" do
+
+    it "includes query words" do
       assert_equal 1340, @response.query_words
     end
-    
-    should "not be an error" do
+
+    it "is not an error" do
       assert !@response.error?
     end
   end
-  
-  context "duplicate" do
-    
-    setup do
+
+  describe "duplicate" do
+
+    before do
       @response = Copyscape::Response.new(url_search_response_duplicate)
     end
-    
-    should "include count" do
+
+    it "includes count" do
       assert_equal 81, @response.count
     end
-    
-    should "be a duplicate" do
+
+    it "is a duplicate" do
       assert @response.duplicate?
     end
-    
-    should "include duplicates" do
+
+    it "includes duplicates" do
       dup = @response.duplicates.first
       assert_equal 'http://www.archives.gov/exhibits/charters/declaration_transcript.html', dup['url']
       assert_equal "Declaration of Independence - Transcript", dup['title']
@@ -45,53 +44,53 @@ class ResponseTest < Test::Unit::TestCase
         dup['htmlsnippet']
       assert_equal 134, dup['minwordsmatched']
     end
-    
-    should "have the right amount of duplicates" do
+
+    it "has the right amount of duplicates" do
       assert_equal @response.count, @response.duplicates.length
     end
-    
+
   end
-  
-  context "not duplicate" do
-    setup do
+
+  describe "not duplicate" do
+    before do
       @response = Copyscape::Response.new(url_search_response_not_duplicate)
     end
-    
-    should "include count" do
+
+    it "includes count" do
       assert_equal 0, @response.count
     end
-    
-    should "be a duplicate" do
+
+    it "is no a duplicate" do
       assert !@response.duplicate?
     end
-    
-    should "include duplicates" do
+
+    it "includes duplicates" do
       assert @response.duplicates.empty?
     end
-    
+
   end
-  
-  context "error" do
-    setup do
+
+  describe "error" do
+    before do
       @response = Copyscape::Response.new(error_response)
     end
-    
-    should "be an error" do
+
+    it "is an error" do
       assert @response.error?
     end
-    
-    should "return error message" do
+
+    it "returns an error message" do
       assert_equal "connection failed (2) - please ensure you entered the URL correctly", @response.error
     end
-    
+
   end
-  
+
   private
-  
+
   def url_search_response_duplicate
     File.read(File.expand_path('../url_search_response_duplicate.xml', __FILE__))
   end
-  
+
   def url_search_response_not_duplicate
     File.read(File.expand_path('../url_search_response_not_duplicate.xml', __FILE__))
   end
@@ -99,5 +98,5 @@ class ResponseTest < Test::Unit::TestCase
   def error_response
     File.read(File.expand_path('../error_response.xml', __FILE__))
   end
-  
+
 end

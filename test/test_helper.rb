@@ -1,7 +1,7 @@
 require 'rubygems'
-require 'test/unit'
-require 'shoulda-context'
-require 'mocha'
+require 'minitest/spec'
+require 'minitest/autorun'
+require 'mocha/setup'
 
 $LOAD_PATH.unshift File.dirname(File.expand_path(__FILE__)) + '/../lib'
 
