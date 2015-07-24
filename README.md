@@ -18,7 +18,7 @@ And then you can do things like this...
 
     Copyscape.username = 'yourname'
     Copyscape.api_key = 'abc123'
-    
+
     # URL search
     search = Copyscape.url_search("http://www.copyscape.com/example.html")
     search.duplicate? # => true
@@ -30,18 +30,23 @@ And then you can do things like this...
       puts duplicate['htmlsnippet']
       puts duplicate['minwordsmatched']
     end
-    
+
     # Text search
     search = Copyscape.text_search('This is some text I want to check for plagurism')
     search.duplicate? # => false
-    
-    
+
+
 Currently, there is no support in the gem for "private index" searching, though
 it would be pretty easy to add.
 
-    
+
 More...
 -------
 
 I'm in no way associated with Copyscape.
 
+
+License
+-------
+
+See [LICENSE](LICENSE)
