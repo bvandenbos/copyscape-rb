@@ -3,6 +3,8 @@ copyscape
 
 Ruby wrapper for the Copyscape API.
 
+[![Build Status](https://travis-ci.org/bvandenbos/copyscape-rb.svg)](https://travis-ci.org/bvandenbos/copyscape-rb)
+
 
 Usage
 -----
