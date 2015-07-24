@@ -1,4 +1,4 @@
 
 module Copyscape
-  Version = '0.0.5' unless defined?(Version)
+  Version = '0.0.6' unless defined?(Version)
 end
