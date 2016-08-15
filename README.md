@@ -21,7 +21,8 @@ And then you can do things like this...
 ```ruby
   Copyscape.username = 'yourname'
   Copyscape.api_key = 'abc123'
-
+  Copyscape.comparision_level = 4 # 0 to 10. Default is 0 
+  
   # URL search
   search = Copyscape.url_search("http://www.copyscape.com/example.html")
   search.duplicate? # => true

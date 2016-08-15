@@ -8,7 +8,7 @@ module Copyscape
   
   class << self
 
-    attr_accessor :username, :api_key
+    attr_accessor :username, :api_key, :comparision_level
     
     def url_search(url)
       UrlSearch.new(url)

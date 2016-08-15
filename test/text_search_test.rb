@@ -13,7 +13,10 @@ describe Copyscape::TextSearch do
         assert_equal 'this is some text', params[:t]
         assert_equal 'csearch', params[:o]
         assert_equal 'UTF-8', params[:e]
+        assert_equal '4', params[:c]        
       end
+    
+      Copyscape.comparision_level = 4
       @search = Copyscape::TextSearch.new('this is some text')
     end
   end
