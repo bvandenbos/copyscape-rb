@@ -9,9 +9,10 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Ben VandenBos', 'Galeta Igor']
   s.email       = ['bvandenbos@gmail.com', 'galeta.igor@gmail.com']
+  s.licenses    = ['MIT']
   s.homepage    = 'https://github.com/galetahub/copyscape-rb'
   s.summary     = 'Ruby wrapper for Copyscape API'
-  s.description = 'Ruby wrapper for Copyscape API'
+  s.description = 'Simple and easy way to use Copyscape API from Ruby'
 
   s.required_rubygems_version = '>= 1.3.6'
 
