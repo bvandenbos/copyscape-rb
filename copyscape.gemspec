@@ -24,5 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency('nokogiri', '>= 1.8.0')
 
   s.add_development_dependency('mocha')
+  s.add_development_dependency('rake', '~> 10.0')
   s.add_development_dependency('shoulda-context')
+  s.add_development_dependency('test-unit', '>= 3.2.0')
 end

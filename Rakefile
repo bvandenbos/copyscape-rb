@@ -1,13 +1,17 @@
-require 'bundler'
-Bundler::GemHelper.install_tasks
+# encoding: utf-8
 
-$LOAD_PATH.unshift 'lib'
+require 'rake'
+require 'rake/testtask'
 
+require File.join(File.dirname(__FILE__), 'lib', 'copyscape', 'version')
+
+desc 'Default: run unit tests.'
 task :default => :test
 
-desc "Run tests"
-task :test do
-  Dir['test/*_test.rb'].each do |f|
-    require File.expand_path(f)
-  end
+desc 'Test the enum_field plugin.'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'lib'
+  t.libs << 'test'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = true
 end
