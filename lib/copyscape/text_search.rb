@@ -1,14 +1,12 @@
 require 'copyscape/request_base'
 
 module Copyscape
-  
   class TextSearch < RequestBase
-
     # The parameters are as follows:
     # Parameter Explanation         Value                    Required? Default
     # u         Your username       [your username]          Yes       -
     # k         Your API key        [your API key]           Yes       -
-    # o         API operation       csearch (or psearch or 
+    # o         API operation       csearch (or psearch or
     #  cpsearch if you create a private index)               Yes       -
     # e         Text encoding       [encoding name]          Yes       -
     # t         Text to be searched [the text]               Yes       -
@@ -18,16 +16,14 @@ module Copyscape
     #
     def initialize(text, encoding = 'UTF-8', options = {})
       options = {
-        :t => text,
-        :e => encoding,
-        :o => "csearch",
-        :f => "xml"
+        t: text,
+        e: encoding,
+        o: 'csearch',
+        f: 'xml'
       }.merge(options)
 
       http_response = post_response(options)
       @response = Response.new(http_response)
     end
-
   end
-  
 end

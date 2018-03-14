@@ -5,15 +5,13 @@ require 'copyscape/balance'
 require 'copyscape/version'
 
 module Copyscape
-  
   class << self
-
     attr_accessor :username, :api_key
-    
+
     def url_search(*args)
       UrlSearch.new(*args)
     end
-    
+
     def text_search(*args)
       TextSearch.new(*args)
     end
@@ -21,7 +19,5 @@ module Copyscape
     def balance(*args)
       Balance.new(*args)
     end
-    
   end
-   
 end

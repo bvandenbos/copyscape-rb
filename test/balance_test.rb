@@ -1,13 +1,12 @@
 require File.dirname(__FILE__) + '/test_helper'
 
 class BalanceTest < Test::Unit::TestCase
-
   context "request balance in xml" do
     setup do
       Copyscape::Balance.expects(:get).once.returns(balance_response_duplicate(:xml))
       @balance = Copyscape::Balance.new(:xml)
     end
-    
+
     should "have the correct url" do
       assert_match raw_response_duplicate(:xml), @balance.raw_response
     end
@@ -18,7 +17,7 @@ class BalanceTest < Test::Unit::TestCase
       Copyscape::Balance.expects(:get).once.returns(balance_response_duplicate(:html))
       @balance = Copyscape::Balance.new(:html)
     end
-    
+
     should "have the correct url" do
       assert_match raw_response_duplicate(:html), @balance.raw_response
     end
